@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://c6ebl3xmikirc"]
+[gd_scene load_steps=2 format=3 uid="uid://c6ebl3xmikirc"]
+
+[ext_resource type="PackedScene" uid="uid://c7vhu7187s4rj" path="res://Scenes/demon_player.tscn" id="1_lq7nq"]
 
 [node name="Arena" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
+modulate = Color(1, 0, 0, 1)
 z_index = -10
 
 [node name="HellBackground" type="ColorRect" parent="Background"]
@@ -11,6 +14,7 @@ offset_bottom = 648.0
 color = Color(0.09803922, 0, 0, 1)
 
 [node name="LavaFloor" type="Node2D" parent="."]
+modulate = Color(0.79994524, 0.56680673, 0.19809508, 1)
 z_index = 1
 
 [node name="Lava" type="ColorRect" parent="LavaFloor"]
@@ -90,3 +94,6 @@ offset_top = 258.0
 offset_right = 585.0
 offset_bottom = 298.0
 color = Color(0.54649514, 0.23112899, 0.11989459, 1)
+
+[node name="DemonPlayer" parent="." instance=ExtResource("1_lq7nq")]
+position = Vector2(124, 495)
